@@ -86,20 +86,23 @@ img {
 
 /* ── Primary nav ── */
 .site-nav {
+    align-self: center;
+}
+
+.site-nav > ul {
     display: flex;
     flex-wrap: nowrap;
     gap: 0;
-    align-self: center;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.site-nav > li {
+.site-nav > ul > li {
     position: relative;
 }
 
-.site-nav > li > a {
+.site-nav > ul > li > a {
     display: block;
     color: #FFFFFF;
     font-size: 0.97rem;
@@ -109,17 +112,17 @@ img {
     white-space: nowrap;
 }
 
-.site-nav > li > a:hover {
+.site-nav > ul > li > a:hover {
     text-decoration: none;
     border-bottom-color: rgba(229, 117, 31, 0.65);
 }
 
-.site-nav > li > a.current {
+.site-nav > ul > li > a.current {
     border-bottom-color: var(--vt-burnt-orange);
 }
 
 /* ── Dropdown ── */
-.site-nav > li > ul {
+.site-nav > ul > li > ul {
     display: none;
     position: absolute;
     top: 100%;
@@ -135,12 +138,12 @@ img {
     z-index: 200;
 }
 
-.site-nav > li:hover > ul,
-.site-nav > li:focus-within > ul {
+.site-nav > ul > li:hover > ul,
+.site-nav > ul > li:focus-within > ul {
     display: block;
 }
 
-.site-nav > li > ul > li > a {
+.site-nav > ul > li > ul > li > a {
     display: block;
     color: rgba(255,255,255,0.92);
     font-size: 0.98rem;
@@ -149,13 +152,13 @@ img {
     white-space: nowrap;
 }
 
-.site-nav > li > ul > li > a:hover {
+.site-nav > ul > li > ul > li > a:hover {
     text-decoration: none;
     background: rgba(255,255,255,0.10);
     color: #FFFFFF;
 }
 
-.site-nav > li > ul > li > a.current {
+.site-nav > ul > li > ul > li > a.current {
     color: #FFFFFF;
     background: rgba(229,117,31,0.18);
     border-left: 3px solid var(--vt-burnt-orange);
@@ -405,11 +408,11 @@ img {
         align-items: flex-start;
     }
 
-    .site-nav {
+    .site-nav > ul {
         gap: 0;
     }
 
-    .site-nav > li > ul {
+    .site-nav > ul > li > ul {
         position: static;
         display: none;
         box-shadow: none;
@@ -418,8 +421,8 @@ img {
         padding: 0 0 4px 14px;
     }
 
-    .site-nav > li:hover > ul,
-    .site-nav > li:focus-within > ul {
+    .site-nav > ul > li:hover > ul,
+    .site-nav > ul > li:focus-within > ul {
         display: block;
     }
 
